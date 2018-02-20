@@ -1,0 +1,219 @@
+
+import random
+import time
+i = 0
+
+results = random.randint(1,10)
+
+print ("Welcome to my game")
+print(" ")
+# This is my game 
+print("In the next section you have to confrim your username, password and email.")
+time.sleep(0.1)
+print(" ")
+time.sleep(0.1)
+str(input("Enter Your username: "))
+while i == 0:
+    res = input("Enter Your Password: ")
+    if len(res) < 4:
+        print("your password is too short")
+        continue
+    res1 = input("confirm password: ")
+    if res == res1:
+        i = 1
+    else:
+        print('You have entered the wrong password')
+str(input("Enter Your email: "))
+print(" ")
+print ("Now, you have to answer some questions and if you answer all question correct you will be rewarded. ")
+print(" ")
+def answer ():
+    def one():
+        print("2010 Commonwealth Games held in?")
+        print("a. Canada")
+        print("b. India")
+        print("c. Britian")
+        print("d. Malaysia")
+        choice = input("Enter your choice(a/b/c/d))")
+        if (choice == "b"):
+            print ("Your answer was correct.")
+        print(" ")
+    def two():
+        print("Aga Khan Cup is awarded to?")
+        print("a.International Hockey")
+        print("b.Asian Hockey")
+        print("c.National Hockey in India")
+        print("d.None of these")
+        choice = input("Enter your choice(a/b/c/d)")
+        if (choice == "c"):
+            print("Your answer was correct.")
+        print(" ")
+    def three():
+        print("Which is the national sport of Canada? ")
+        print("a.Lacrosse/Ice hockey")
+        print("b.Cricket")
+        print("c.Feild Hockey")
+        print("d.Volleyball")
+        choice = input("Enter your choice(a/b/c/d)")
+        if (choice == "a"):
+            print("Your answer was correct")
+        print(" ")
+    def four():
+        print("When was the Commonwealth game started?")
+        print("a.1930")
+        print("b.1934")
+        print("c.1938")
+        print("d.1950")
+        choice = input("Enter your choice(a/b/c/d)")
+        if (choice == "a"):
+            print("Your answer was correct")
+        print(" ")
+    def five():
+        print("____________ has won Cricket world cup for the maximum number of times.")
+        print("a.Australia")
+        print("b.India")
+        print("c.West Indies")
+        print("d.Sri Lanka")
+        choice = input("Enter your choice(a/b/c/d)")
+        if (choice == "a"):
+            print("Your answer was correct")
+        print(" ")
+    def six():
+        print("Olympic Games were first started by which country and in which year?")
+        print("a.France (1894)")
+        print("b.Greece (1896)")
+        print("c.France (1924)")
+        print("d.Greece (1890)")
+        choice = input("Enter your choice(a/b/c/d)")
+        if (choice == "b"):
+            print("Your answer was correct")
+        print(" ")
+    def seven():
+        print("Which city of United States hosted Olympic Games in 1996?")
+        print("a.St. Louis")
+        print("b.Los Angeles")
+        print("c.Atlanta")
+        print("d.None of the above")
+        choice = input("Enter your choice(a/b/c/d)")
+        if (choice == "c"):
+            print("Your answer is correct")
+        print(" ")
+    def eight():
+        print("In 2012 which country hosted Olympic Games?")
+        print("a.China")
+        print("b.Greece")
+        print("c.Australia")
+        print("d.United Kingdom")
+        choice = input("Enter your choice(a/b/c/d)")
+        if (choice == "d"):
+            print("Your answer is correct")
+        print(" ")
+    def nine():
+        print(" Where did the game of Badminton originate?")
+        print("a.Delhi")
+        print("b.Pune")
+        print("c.Karachi")
+        print("d.Tamil Nadu")
+        choice = input("Enter your choice(a/b/c/d)")
+        if (choice == "a"):
+            print("Your answer is correct")
+        print(" ")
+    def ten():
+        print("Which is the oldest football club in India?")
+        print("a.Pailan Arrows")
+        print("b.Prayag United")
+        print("c.United Sikkim")
+        print("d.Mohun Bagan")
+        choice = input("Enter your choice (a/b/c/d)")
+        if (choice == "d"):
+            print ("Your answer is correct")
+        print("")
+        
+    count = 1 
+    rand=[]
+    while count <= 10:
+        #count is integer so we want it into string.
+        print("Question "+ str(count) +":")
+        while True:
+            flag = False
+            import random 
+            questions = [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,]
+            question = random.choice(questions)
+            for x in range(count-1):
+                if (question == rand[x]):
+                    flag = True
+                    break
+            if (flag == False):
+                rand.append(question)
+                break
+        options = {1 : one,
+                   2 : two,
+                   3 : three,
+                   4 : four, 
+                   5 : five, 
+                   6 : six,
+                   7 : seven,
+                   8 : eight,
+                   9 : nine,
+                   10 : ten,}
+        options[question]()
+        count =count+1;
+    
+    def calculate(answer):
+        a=0
+        if (a!=0):
+            answer = answer + 1
+        b=1  
+        if (b!=1):
+            answer = answer+1 
+        c=2  
+        if (b!=2):
+            answer = answer+1 
+        d=3  
+        if (b!=3):
+            answer = answer+1 
+        e=4  
+        if (b!=4):
+            answer = answer+1 
+        f=5  
+        if (b!=5):
+            answer = answer+1 
+        g=6  
+        if (b!=6):
+            answer = answer+1 
+        h=7  
+        if (b!=7):
+            answer = answer+1 
+        i=8  
+        if (b!=8):
+            answer = answer+1 
+        j=9  
+        if (b!=9):
+            answer = answer+1 
+        print (answer, + "out of 10")
+       
+        answer = 0 
+        max_answer =10
+        while answer < max_answer:
+                answer =answer+1
+                print(answer, +"out of ten")
+    calculate(0)
+    
+    
+    
+        
+        
+        
+        
+        
+        
